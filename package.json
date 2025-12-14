@@ -1,7 +1,14 @@
 {
   "name": "run-js-ts",
   "displayName": "Run JS/TS",
+   "publisher": "RachelIrabor",
   "description": "Run JavaScript, TypeScript, and TSX files with live reload",
+   
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Uchemena/Run-JS-TS"
+  },
+  
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.74.0"
