@@ -31,7 +31,6 @@ No terminal focus. No npm scripts. No setup.
 
 - Runs `.js`, `.ts`, and `.tsx` files using Node
 - Uses `tsx` to execute TypeScript and TSX without pre-compiling
-- Restarts the process automatically when files change
 - Shows all output in a dedicated VS Code output panel
 - Integrates into the Explorer via right-click
 
@@ -103,7 +102,6 @@ This extension is useful if you:
 - want to run a single file quickly
 - are writing small scripts or utilities
 - are prototyping logic or backend behavior
-- want automatic restart without setting up watch tools
 - prefer staying inside VS Code instead of switching to the terminal
 
 ---
@@ -124,15 +122,6 @@ If you need a browser-based UI preview, use:
 - VS Code Live Preview
 
 ---
-
-## How Restart Works
-
-- The file is executed as a Node process
-- When any `.js`, `.ts`, or `.tsx` file in the workspace changes:
-  - the process is stopped
-  - the file is restarted
-
-This is process-level restart, not browser refresh.
 
 ---
 
