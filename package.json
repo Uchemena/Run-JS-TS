@@ -1,0 +1,56 @@
+{
+  "name": "run-js-ts",
+  "displayName": "Run JS/TS",
+  "description": "Run JavaScript, TypeScript, and TSX files with live reload",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:run-js-ts.start",
+    "onCommand:run-js-ts.stop",
+    "onCommand:run-js-ts.runFile"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "run-js-ts.start",
+        "title": "JS/TS Live: Start"
+      },
+      {
+        "command": "run-js-ts.stop",
+        "title": "JS/TS Live: Stop"
+      },
+      {
+        "command": "run-js-ts.runFile",
+        "title": "Run TS"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "run-js-ts.runFile",
+          "when": "resourceExtname == .ts || resourceExtname == .tsx || resourceExtname == .js",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^5.1.0"
+  },
+  "dependencies": {
+    "tsx": "^4.6.0"
+  }
+}
